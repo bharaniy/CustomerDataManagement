@@ -1,0 +1,52 @@
+  <mat-card class="example-card">
+    <mat-card-content>
+      <mat-card-subtitle>First Name:</mat-card-subtitle>
+      <mat-card-subtitle>{{customer.firstName}}</mat-card-subtitle>
+      </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <mat-card-subtitle>Last Name:</mat-card-subtitle>
+      <mat-card-subtitle>{{customer.lastName}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <mat-card-subtitle>Customer ID:</mat-card-subtitle>
+      <mat-card-subtitle>{{customer.cId}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <mat-card-subtitle>City:</mat-card-subtitle>
+      <mat-card-subtitle>{{customer.locatedCity}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <mat-card-subtitle>Gender:</mat-card-subtitle>
+      <mat-card-subtitle>{{customer.gender}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <mat-card-subtitle>Email ID:</mat-card-subtitle>
+      <mat-card-subtitle>{{customer.emailId}}</mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+<mat-card class="example-card">
+  <mat-card-content>
+    <mat-card-subtitle>Date of Birth:</mat-card-subtitle>
+    <mat-card-subtitle>{{customer.dOb}}</mat-card-subtitle>
+  </mat-card-content>
+</mat-card>
+<mat-card class="example-card">
+  <mat-card-content>
+    <mat-card-subtitle>Update Date:</mat-card-subtitle>
+    <mat-card-subtitle>{{customer.updatedDate | date}}</mat-card-subtitle>
+  </mat-card-content>
+</mat-card>
+  <mat-card-actions class="button-row">
+    <a mat-raised-button color="primary" [routerLink]="['/book-edit', customer._id]">Edit</a>
+    <a mat-raised-button color="primary" (click)="deleteBook(customer._id)">Delete</a>
+  </mat-card-actions>

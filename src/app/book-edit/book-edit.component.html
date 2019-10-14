@@ -1,0 +1,62 @@
+<form [formGroup]="customerForm" (ngSubmit)="onFormSubmit(customerForm.value)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="First Name" formControlName="firstName"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!customerForm.get('firstName').valid && customerForm.get('firstName').touched">Please enter firstName</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Last Name" formControlName="lastName"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!customerForm.get('lastName').valid && customerForm.get('lastName').touched">Please enter Book lastName</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Customer ID" formControlName="cId"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!customerForm.get('cId').valid && customerForm.get('cId').touched">Please enter cId</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Email Id" formControlName="emailId"
+              [errorStateMatcher]="matcher"></textarea>
+    <mat-error>
+      <span *ngIf="!customerForm.get('emailId').valid && customerForm.get('emailId').touched">Please enter emailId</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="City" formControlName="locatedCity"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!customerForm.get('locatedCity').valid && customerForm.get('locatedCity').touched">Please enter locatedCity</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Date of Birth" formControlName="dOb"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!customerForm.get('dOb').valid && customerForm.get('dOb').touched">Please enter dOb</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Phone Number" formControlName="phoneNumber"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!customerForm.get('phoneNumber').valid && customerForm.get('phoneNumber').touched">Please enter phoneNumber</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Gender" formControlName="gender"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!customerForm.get('gender').valid && customerForm.get('gender').touched">Please enter gender</span>
+    </mat-error>
+  </mat-form-field>
+  <div class="button-row">
+    <button type="submit" [disabled]="!customerForm.valid" mat-raised-button color="primary">Save
+    </button>
+  </div>
+</form>

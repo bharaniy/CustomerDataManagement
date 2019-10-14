@@ -1,0 +1,10 @@
+.example-card {
+  max-width: 500px;
+  alignment: center;
+  height: auto;
+}
+
+.button-row {
+  margin: 10px 0;
+}
+
